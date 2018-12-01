@@ -1,5 +1,6 @@
 #!data/data/com.termux/files/usr/bin/bash
-
+clear
+apt install toilet -y
 clear
 toilet -f letter MENU --filter gay
 sleep 2
